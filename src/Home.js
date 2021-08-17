@@ -7,12 +7,20 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 import './css/App.css';
+import { Link } from 'react-router-dom';
 
 
 
 const Home = () => {
     return (
 <Container>
+{/*   <nav className="navbar navbar-dark bg-dark">
+    <div className="contaner-fluid">
+  <Link to="/personajes"><button className="btn btn-outline-success text-start mx-3" type="button">  Personajes</button></Link>
+  <Link to="/personajes"><button className="btn btn-outline-success mx-3" type="button">  Vehiculos</button></Link>
+  <Link to="/personajes"><button className="btn btn-outline-success mx-3" type="button">  Planetas</button></Link>
+  </div>
+  </nav> */}
     <Row className="top justify-content-md-center">
      
       <Col xl={4} className="mt-5">
