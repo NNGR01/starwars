@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './css/App.css';
 import Home from './Home';
 import Nav from './nav';
+import injectContext from './store/appContext';
 import Characters from './views/characters';
 import Planets from './views/planets';
 import Vehicles from './views/vehicles';
@@ -22,7 +23,7 @@ const App = () => {
     )
 }
 
-export default App;
+export default injectContext(App);
 
 
 
