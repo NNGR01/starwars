@@ -9,7 +9,9 @@ const getState = ({ getStore, getAction, setStore }) => {
         starships: "null",
         planet: "null",
         character: "null",
-        starship: "null",},
+        starship: "null",
+        diameter:"null"    
+    },
 
         actions: {
             getPlanets:  async   ()  =>{

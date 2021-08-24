@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 
 const Planets = () => {
     const { store, actions}  =   useContext(Context);
-    console.log(store.planets)
+    console.log(store.planet)
  
 
   return (
@@ -21,7 +21,8 @@ const Planets = () => {
             <div className="card-body">
               <h5 className="card-title text-center">{plan.name}</h5>
               <p className="card-text text-center">
-                <small class="text-muted ">Last updated 3 mins ago</small>
+                <small class="text-muted ">Diameter: {plan.diameter}</small>
+               
               </p>
             </div>
           </div>
@@ -30,7 +31,7 @@ const Planets = () => {
       })
       :
       (
-        <h1>asd</h1>
+        <h1>Cargando...</h1>
       )
     }
 
