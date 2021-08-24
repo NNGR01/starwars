@@ -16,7 +16,7 @@ const injectContext = (PassedComponent) => {
         }))
     useEffect(() =>{
 
-    
+    state.actions.getPlanets();
     },[])
     return (
         <Context.Provider value={state}>

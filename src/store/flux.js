@@ -17,7 +17,7 @@ const getState = ({ getStore, getAction, setStore }) => {
                const data = await   resp.json();
                setStore({ planet : data });
             },
-            getPlanet: async id  =>{
+            getPlan: async id  =>{
                 fetch(`https://www.swapi.tech/api/planets${id}`)
                 .then ( resp => resp.json())
                 .then ( data =>{
