@@ -51,7 +51,8 @@ const getState = ({ getStore, getAction, setStore }) => {
              .then ( data =>{
                  setStore({ character : data })
              })
-         }
+         },
+      
         }
 
 

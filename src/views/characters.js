@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from 'react-router-dom';
 
 const Characters = () => {
     const { store, actions}  =   useContext(Context);
@@ -23,7 +24,9 @@ const Characters = () => {
               <p className="card-text text-center">
                 <small class="text-muted ">Url: {char.url}</small>
                
+               
               </p>
+               <Link to={`/personajes/${char.uid}` } className="btn text-center">asd</Link>
             </div>
           </div>
           </div>
