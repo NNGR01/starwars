@@ -23,10 +23,9 @@ const Characters = () => {
               <h5 className="card-title text-center">{char.name}</h5>
               <p className="card-text text-center">
                 <small class="text-muted ">Url: {char.url}</small>
-               
-               
               </p>
-               <Link to={`/personajes/${char.uid}` } className="btn text-center">asd</Link>
+              <p className="card-text text-center"><Link to={`/personajes/${char.uid}` } className="btn btn-light text-center">Ficha tecnica</Link></p>
+               
             </div>
           </div>
           </div>
