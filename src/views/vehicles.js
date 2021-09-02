@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 const Vehicles = () => {
@@ -22,11 +23,12 @@ const Vehicles = () => {
               <h5 className="card-title text-center">{vehi.name}</h5>
               <p className="card-text text-center">
                 <small class="text-muted ">Url: {vehi.url}</small>
-               
-              </p>
+               </p>
+               <p className="card-text text-center"> <Link to={`/vehiculos/${vehi.uid}`}><button className="btn btn-outline-success mx-3 text-center" type="button">Ficha tecnica</button></Link></p>
+            </div>
             </div>
           </div>
-          </div>
+       
        
         )
       })

@@ -18,13 +18,13 @@ const getState = ({ getStore, getAction, setStore }) => {
             getPlanets:  async   ()  =>{
                const resp = await   fetch("https://www.swapi.tech/api/planets");
                const data = await   resp.json();
-               setStore({ planet : data });
+               setStore({ planets : data });
             },
             getPlan: async id  =>{
                 fetch(`https://www.swapi.tech/api/planets${id}`)
                 .then ( resp => resp.json())
                 .then ( data =>{
-                    setStore({ planet : data })
+                    setStore({ planets : data })
                 })
             },
             getVehicles:  async   ()  =>{
@@ -37,7 +37,7 @@ const getState = ({ getStore, getAction, setStore }) => {
             fetch(`https://www.swapi.tech/api/vehicles${id}`)
             .then (resp => resp.json())
             .then( data =>{
-                setStore( { vehicles : data } )
+                setStore( { vehicle : data } )
             })
         },
         getCharacters:  async   ()  =>{

@@ -24,7 +24,7 @@ const Characters = () => {
               <p className="card-text text-center">
                 <small class="text-muted ">Url: {char.url}</small>
               </p>
-              <p className="card-text text-center"><Link to={`/personajes/${char.uid}` } className="btn btn-light text-center">Ficha tecnica</Link></p>
+              <p className="card-text text-center"> <Link to={`/personajes/${char.uid}`}><button className="btn btn-outline-success mx-3 text-center" type="button">Ficha tecnica</button></Link></p>
                
             </div>
           </div>
