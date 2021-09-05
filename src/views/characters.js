@@ -28,6 +28,7 @@ const Characters = () => {
                
             </div>
           </div>
+          
           </div>
        
         )

@@ -35,10 +35,11 @@ const getState = ({ getStore, getAction, setStore }) => {
     
         getVeh: async id =>{
             fetch(`https://www.swapi.tech/api/vehicles${id}`)
-            .then (resp => resp.json())
-            .then( data =>{
-                setStore( { vehicle : data } )
+            .then(resp => resp.json())
+            .then(data =>{
+                setStore({ vehicle : data })
             })
+         
         },
         getCharacters:  async   ()  =>{
             const resp = await   fetch("https://www.swapi.tech/api/people");

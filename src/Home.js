@@ -12,7 +12,7 @@ const Home = () => {
     <div className="gif col-md-6">
       <img src="https://media.giphy.com/media/RLKbCYRD4EtzUVkbMt/giphy.gif" className="mt-3"></img>
       <img src="https://media.giphy.com/media/3o84sCEktZAjG9flte/giphy.gif" className="mt-3"></img>
-      <img src="https://media.giphy.com/media/3oeSAFBvE1Tn89ysfK/giphy.gif" className="mt-3"></img>
+      <img src="https://media.giphy.com/media/3oeSAFBvE1Tn89ysfK/giphy.gif" className="mt-3" />
     </div>
   </div>
 </div>
