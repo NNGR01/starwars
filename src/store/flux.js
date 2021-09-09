@@ -6,11 +6,10 @@ const getState = ({ getStore, getAction, setStore }) => {
         store: {
         characters: "null",
         planets: "null",
-       vehicles: "null",
         planet: "null",
         character: "null",
-        vehicle: "null",
-        
+        starships:"null",
+        starship:"null",
 
     },
 
@@ -27,17 +26,17 @@ const getState = ({ getStore, getAction, setStore }) => {
                     setStore({ planets : data })
                 })
             },
-            getVehicles:  async   ()  =>{
-                const resp = await   fetch("https://www.swapi.tech/api/vehicles");
+            getStarsh:  async   ()  =>{
+                const resp = await   fetch("https://www.swapi.tech/api/starships");
                 const data = await   resp.json();
-                setStore({ vehicles : data });
+                setStore({ starships : data });
              },
     
-        getVeh: async id =>{
-            fetch(`https://www.swapi.tech/api/vehicles${id}`)
-            .then(resp => resp.json())
-            .then(data =>{
-                setStore({ vehicle : data })
+            getStar: async id =>{
+            fetch(`https://www.swapi.tech/api/starships${id}`)
+            .then(resp => resp.json()) 
+            .then(data => {
+                setStore({ starship : data })
             })
          
         },

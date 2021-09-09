@@ -7,8 +7,9 @@ import Char from './views/char';
 import Characters from './views/characters';
 import Plan from './views/plan';
 import Planets from './views/planets';
-import Veh from './views/veh';
-import Vehicles from './views/vehicles';
+import Star from './views/star';
+import Naves from './views/starships';
+
 
 
 const App = () => {
@@ -21,8 +22,8 @@ const App = () => {
         <Route exact path="/personajes/:id" component={Char} />
         <Route exact path="/planetas/:id" component={Plan} />
         <Route exact path="/planetas" component={Planets} />
-        <Route exact path="/planetas/:id" component={Veh} />
-        <Route exact path="/vehiculos" component={Vehicles} />
+        <Route exact path="/naves" component={Naves} />
+        <Route exact path="/naves/:id" component={Star} />
 
       </Switch>
       </BrowserRouter>

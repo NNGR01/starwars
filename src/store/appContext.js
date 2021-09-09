@@ -17,9 +17,10 @@ const injectContext = (PassedComponent) => {
     useEffect(() =>{
 
     state.actions.getPlanets();
-    state.actions.getVehicles();
+    state.actions.getStarsh();
     state.actions.getCharacters();
-    state.actions.getVeh();
+
+   
     },[])
     return (
         <Context.Provider value={state}>
