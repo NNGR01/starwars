@@ -18,11 +18,9 @@ const getState = ({ getStore, getAction, setStore }) => {
         setStore({ planets: data });
       },
       getPlan: async (id) => {
-        fetch(`https://www.swapi.tech/api/planets${id}`)
-          .then((resp) => resp.json())
-          .then((data) => {
-            setStore({ planets: data });
-          });
+       const resp = await fetch(`https://www.swapi.tech/api/planets/${id}`);
+       const data = await resp.json()
+       setStore({ planet : data  });
       },
       getStarsh: async () => {
         const resp = await fetch("https://www.swapi.tech/api/starships");
