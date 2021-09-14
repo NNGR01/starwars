@@ -20,7 +20,7 @@ import { Context } from "../store/appContext";
 
 return (
     <div className="container">
-<h1>asd</h1>
+
 {!!result && (
     <>
     

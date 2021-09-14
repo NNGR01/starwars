@@ -42,11 +42,9 @@ const getState = ({ getStore, getAction, setStore }) => {
         setStore({ characters: data });
       },
       getChar: async (id) => {
-        fetch(`https://www.swapi.tech/api/people${id}`)
-          .then((resp) => resp.json())
-          .then((data) => {
-            setStore({ character: data });
-          });
+       const resp = await fetch(`https://www.swapi.tech/api/people/${id}`);
+       const data = await resp.json()
+       setStore({ character: data });
       },
     },
   };
