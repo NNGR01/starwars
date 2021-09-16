@@ -1,5 +1,3 @@
-
-
 const getState = ({ getStore, getAction, setStore }) => {
   return {
     store: {
@@ -12,37 +10,42 @@ const getState = ({ getStore, getAction, setStore }) => {
     },
 
     actions: {
-      getPlanets: async () => {
-        const resp = await fetch("https://www.swapi.tech/api/planets");
-        const data = await resp.json();
-        setStore({ planets: data });
+      getPlanets: async (url) => {
+        fetch(url)
+          .then((resp) => resp.json())
+          .then((data) => {
+            setStore({ planets: data });
+          });
       },
       getPlan: async (id) => {
-       const resp = await fetch(`https://www.swapi.tech/api/planets/${id}`);
-       const data = await resp.json()
-       setStore({ planet : data  });
-      },
-      getStarsh: async () => {
-        const resp = await fetch("https://www.swapi.tech/api/starships");
+        const resp = await fetch(`https://www.swapi.tech/api/planets/${id}`);
         const data = await resp.json();
-        setStore({ starships: data });
+        setStore({ planet: data });
+      },
+      getStarsh: async (url) => {
+        fetch(url)
+          .then((resp) => resp.json())
+          .then((data) => {
+            setStore({ starships: data });
+          });
       },
 
       getStar: async (id) => {
         const resp = await fetch(`https://www.swapi.tech/api/starships/${id}`);
-        const data = await resp.json()
-        setStore({ starship: data });
-        
-      },
-      getCharacters: async () => {
-        const resp = await fetch("https://www.swapi.tech/api/people");
         const data = await resp.json();
-        setStore({ characters: data });
+        setStore({ starship: data });
+      },
+      getCharacters: async (url) => {
+        fetch(url)
+          .then((resp) => resp.json())
+          .then((data) => {
+            setStore({ characters: data });
+          });
       },
       getChar: async (id) => {
-       const resp = await fetch(`https://www.swapi.tech/api/people/${id}`);
-       const data = await resp.json()
-       setStore({ character: data });
+        const resp = await fetch(`https://www.swapi.tech/api/people/${id}`);
+        const data = await resp.json();
+        setStore({ character: data });
       },
     },
   };
