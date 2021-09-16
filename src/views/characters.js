@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import Buscador from "./char1";
 
 const Characters = () => {
   const { store } = useContext(Context);
@@ -9,6 +10,9 @@ const Characters = () => {
 
   return (
     <div className="container">
+      <div className="row">
+        < Buscador />
+      </div>
       <div className="row">
         {!!results &&
           results.map((item, index) => {
