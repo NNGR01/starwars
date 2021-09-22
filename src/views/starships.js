@@ -51,7 +51,7 @@ const Naves = () => {
                   </p>
                   <p className="card-text text-center">
                     {" "}
-                    <Link to={`/personajes/${item.uid}`}>
+                    <Link to={`/naves/${item.uid}`}>
                       <button
                         className="btn btn-outline-success mx-3 text-center"
                         type="button"
